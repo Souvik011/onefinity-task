@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import EnteredForm from "./Form/EnteredForm";
+import List from "./Form/List";
+import { getData } from "./Store/FormThunk";
+import { useDispatch } from "react-redux";
+import { Route,Routes } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const dispatch = useDispatch();
+  useEffect(()=> {
+    dispatch(getData());
+  },[])
+  return (<div>
+    <Routes>
+      <Route path='/' element={<EnteredForm />} />
+      <Route path='/form' element={<EnteredForm />}/>
+      <Route path="/list" element = {<List />} />
+    </Routes>
+  </div>)
 }
-
 export default App;

@@ -1,0 +1,72 @@
+.form{
+    height: max-content;
+    width: 55vw;
+    max-height: 95vh;
+    max-width: 65vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: .35rem 30% 1rem 20%;
+    background-color: rgb(209, 100, 209);
+    border-radius: 10px;
+}
+.heading {
+    border-bottom: dashed 1px black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.listen{
+    position: relative;
+    font-size: 13px;
+    left: 10%;
+    top:30%;
+}
+.lebel{
+    z-index: 99;
+    position: relative;
+    font-size: 8px;
+    width:max-content;
+    height:.75rem;
+    padding:0 .75rem 0 .75rem;
+    left:-24%;
+    background-color: white;
+}
+.input {
+    height: 2rem;
+    width: 18rem;
+    margin-right:2px;
+    position: relative; 
+    border-radius: 4%;
+}
+.mic {
+    position: relative;
+    background-color: gray;
+    color:white;
+    
+}
+.mic:hover {
+    background-color: blue;
+}
+.but {
+    background-color: rgb(15, 15, 90);
+    color: whitesmoke;
+    margin: 1rem;
+    width: 18rem;
+    height: 2rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.but:hover{
+    background-color: rgb(1, 152, 172);
+    color: brown;
+}
+
